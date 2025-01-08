@@ -1,0 +1,12 @@
+#Verificador da bandeira e da validade do cartão de crédito
+- MasterCard
+- Visa
+- American Express
+- Diners Club
+- Discover
+- EnRoute
+- JCB
+- Voyager
+- Hipercard
+- Aura
+- Elo
