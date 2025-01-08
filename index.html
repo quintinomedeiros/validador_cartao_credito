@@ -146,7 +146,7 @@
             const [mes, ano] = validade.split("/").map(num => parseInt(num, 10));
             const dataAtual = new Date();
             const anoAtual = dataAtual.getFullYear() % 100; // Últimos dois dígitos do ano
-            const mesAtual = dataAtual.getMonth() + 1;
+            const mesAtual = dataAtual.getMonth();
 
             // Verifica se a data é válida e não está vencida
             if (!mes || !ano || mes < 1 || mes > 12 || ano < anoAtual || (ano === anoAtual && mes < mesAtual)) {
