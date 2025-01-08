@@ -1,4 +1,4 @@
-#Verificador da bandeira e da validade do cartão de crédito
+# Verificador da bandeira e da validade do cartão de crédito
 - MasterCard
 - Visa
 - American Express
