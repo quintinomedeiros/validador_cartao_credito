@@ -1,3 +1,10 @@
+contexto:
+Este projeto é um istema para validação das bandeiras dos cartões de crédito e da validade do cartão informado pelo usuário, indicando se o cartão está com uma data válida, qual é a bandeira e se ela é aceita
+
+arquivo base:
+index.html
+
+código base:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,3 +163,7 @@
     </script>
 </body>
 </html>
+
+
+prompt:
+Crie um arquivo readme.md com a documentação para o projeto com as informações acima

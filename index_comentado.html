@@ -97,6 +97,7 @@
          * @returns {string|null} - Nome da bandeira ou null se não for válido
          */
         function validarCartao(numeroCartao) {
+            // Define as regras de validação para cada bandeira, com base em expressões regulares
             const regras = [
                 { bandeira: "MasterCard", regex: /^(5[1-5]|222[1-9]|22[3-9]\d|2[3-6]\d{2}|27[01]\d|2720)/ },
                 { bandeira: "MasterCard", regex: /^4/ },
@@ -109,31 +110,36 @@
                 { bandeira: "Hipercard", regex: /^6062/ },
                 { bandeira: "Aura", regex: /^50/ },
                 { bandeira: "Elo", regex: /^(4011|4312|4389)/ },
-
             ];
 
+            // Verifica se o número do cartão corresponde a alguma regra
             for (const regra of regras) {
                 if (regra.regex.test(numeroCartao)) {
                     return regra.bandeira;
                 }
             }
 
-            return null;
+            return null; // Retorna null se nenhuma regra for correspondida
         }
 
         /**
          * Atualiza a exibição da bandeira do cartão com base no número inserido
          */
         function atualizarBandeira() {
+            // Obtém o valor do campo de número do cartão
             const numeroCartao = document.getElementById("numero").value;
+
+            // Valida o número do cartão para determinar a bandeira
             const bandeira = validarCartao(numeroCartao);
+
+            // Obtém o elemento que exibe a bandeira
             const bandeiraIcon = document.getElementById("bandeira-icon");
 
             if (bandeira) {
                 // Exibe o ícone da bandeira do cartão
                 bandeiraIcon.innerHTML = `<img src="${iconesBandeiras[bandeira]}" alt="${bandeira}">`;
             } else {
-                // Exibe mensagem de erro
+                // Exibe mensagem de erro caso a bandeira não seja reconhecida
                 bandeiraIcon.textContent = "Cartão não disponível";
             }
         }
@@ -142,15 +148,20 @@
          * Verifica se a data de validade do cartão é válida ou está vencida
          */
         function verificarValidade() {
+            // Obtém o valor da validade do campo
             const validade = document.getElementById("validade").value;
+
+            // Divide a validade no formato MM/AA em mês e ano
             const [mes, ano] = validade.split("/").map(num => parseInt(num, 10));
+
+            // Obtém o mês e ano atuais
             const dataAtual = new Date();
             const anoAtual = dataAtual.getFullYear() % 100; // Últimos dois dígitos do ano
             const mesAtual = dataAtual.getMonth();
 
-            // Verifica se a data é válida e não está vencida
+            // Valida o mês e o ano
             if (!mes || !ano || mes < 1 || mes > 12 || ano < anoAtual || (ano === anoAtual && mes < mesAtual)) {
-                alert("Cartão vencido!");
+                alert("Cartão vencido!"); // Exibe alerta caso a data esteja inválida
             }
         }
     </script>

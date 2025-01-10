@@ -1,3 +1,4 @@
+Código:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,3 +157,6 @@
     </script>
 </body>
 </html>
+
+Prompt:
+Inclua comentários no código acima para documentar o que é feito em cada trecho
