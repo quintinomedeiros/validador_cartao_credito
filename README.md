@@ -1,7 +1,7 @@
 # 🛡️ Validação de Cartão
 
 <div style="text-align: center; margin-bottom: 20px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Credit_Card_Vector.svg" alt="Ícone de cartão" width="120">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Credit_or_Debit_Card_Flat_Icon_Vector.svg" alt="Ícone de cartão" width="120">
 </div>
 
 ## Sobre o Projeto
