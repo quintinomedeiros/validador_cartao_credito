@@ -101,6 +101,60 @@ O projeto utiliza estilos básicos para uma experiência limpa e amigável. O la
 - Implementar uma validação completa do número do cartão com o algoritmo de Luhn.
 - Disponibilizar uma interface mais avançada com mensagens de erro detalhadas.
 - Suporte multilíngue.
+- Criação de testes automatizados para garantir a confiabilidade das validações.
+- Disponibilização de uma API REST para validação de cartões, permitindo integração com outros sistemas.
+- Inclusão de um sistema de logs para monitorar tentativas de validação e possíveis erros.
+
+---
+
+## 🔍 Exemplos de Uso
+
+### Validação de um Cartão MasterCard
+- Número: `5555555555554444`
+- Bandeira exibida: MasterCard
+
+### Exemplo de Cartão Vencido
+- Data: `01/22`
+- Mensagem: "Cartão vencido!"
+
+### Exemplo de Bandeira Não Suportada
+- Número: `9999999999999999`
+- Mensagem: "Bandeira não reconhecida!"
+
+---
+
+## 🏗️ Arquitetura do Sistema
+
+A aplicação segue uma arquitetura simples, baseada em arquivos estáticos:
+
+- **Frontend**: Responsável pela interação com o usuário, implementado em HTML, CSS e JavaScript puro.
+- **Validação Dinâmica**: A lógica de validação é inteiramente implementada no navegador do usuário, sem necessidade de backend.
+- **Futuro Backend (planejado)**: Para suportar a API REST e integração com outros sistemas, será implementado um backend utilizando Node.js ou Python.
+
+---
+
+## 📚 Referências e Recursos
+
+- [Documentação Oficial do Algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm)
+- [Regexr](https://regexr.com/) para testar expressões regulares.
+- Ícones gratuitos obtidos de [Flaticon](https://www.flaticon.com/).
+- Recursos sobre desenvolvimento web em [MDN Web Docs](https://developer.mozilla.org/).
+
+---
+
+## ❓ Perguntas Frequentes (FAQ)
+
+### 1. O sistema suporta cartões emitidos fora do Brasil?
+Sim, desde que a bandeira seja reconhecida pelo sistema.
+
+### 2. É necessário internet para usar o sistema?
+Não. A aplicação funciona localmente, mas os ícones de bandeira podem exigir conexão para carregamento.
+
+### 3. Quais navegadores são compatíveis?
+Os principais navegadores modernos, como Chrome, Firefox, Edge e Safari, são suportados.
+
+### 4. Posso adicionar novas bandeiras manualmente?
+Sim. Basta atualizar o script JavaScript com a expressão regular correspondente e adicionar o ícone na pasta apropriada.
 
 ---
 
